@@ -1,0 +1,4 @@
+﻿  Interaccion.cpp
+D:\PROGRAMACION\PRACTICAS\PRACTICA 4\tema4inicial_VS19x64\src\Interaccion.cpp(39,14): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
+D:\PROGRAMACION\PRACTICAS\PRACTICA 4\tema4inicial_VS19x64\src\Interaccion.cpp(40,14): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
+  Pang.vcxproj -> D:\PROGRAMACION\PRACTICAS\PRACTICA 4\tema4inicial_VS19x64\bin\Pang.exe
