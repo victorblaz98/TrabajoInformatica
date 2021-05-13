@@ -1,50 +1,54 @@
 #include "Disparo.h"
 #include "freeglut.h"
-#include "Esfera.h"
-#include <stdlib.h>
 
 Disparo::Disparo() {
-	velocidad.x = 0; velocidad.y = 4;
-	aceleracion.x = 0; aceleracion.y = 0;
-	origen.x = -5.0f;
-	origen.y = 0.0f;
-
+	radio = 0.25f;
+	velocidad.y = 2.0f;
+	alcance = 2;
+	daño = 10;
 }
-// Funcion para dibujar el disparo
-void Disparo::dibuja()
+
+Disparo::~Disparo()
 {
-	// TODO: Agregar aquí el código de implementación.
+}
+
+void Disparo::setRadio(float radio) {
+	this->radio = radio;
+}
+
+void Disparo::setVector(Vector2D pos, Vector2D vel, Vector2D acel) {
+	posicion = pos;
+	velocidad = vel;
+	aceleracion = acel;
+}
+
+void Disparo::setPos(float x, float y) {
+	posicion.x = x;
+	posicion.y = y;
+	origen.x = x;
+	origen.y = y;
+}
+
+void Disparo::dibuja() {
 	glColor3f(0.0f, 1.0f, 1.0f);
 	glPushMatrix();
 	glTranslatef(posicion.x, posicion.y, 0);
 	glutSolidSphere(radio, 20, 20);
 	glPopMatrix();
-	//Estela
 
 	glDisable(GL_LIGHTING);
-	glColor3f(rand() / (float)RAND_MAX, rand() / (float)RAND_MAX, rand() / (float)RAND_MAX);//color aleatorio
-	glBegin(GL_POLYGON);
-	glVertex3d(posicion.x-0.2, posicion.y, 0.1f);
-	glVertex3d(posicion.x, posicion.y-3.0f, 0.1f);
-	glVertex3d(posicion.x, posicion.y-3.0f, 0);
-	glVertex3d(posicion.x+0.2, posicion.y, 0);
+	glBegin(GL_LINES);
+	glVertex3f(origen.x, origen.y, 0.0f);
+	glVertex3f(posicion.x, posicion.y, 0.0f);
+
 	glEnd();
 	glEnable(GL_LIGHTING);
-
+	
 }
-
 
 void Disparo::mueve(float t)
 {
-	// TODO: Agregar aquí el código de implementación.
 	posicion = posicion + velocidad * t + aceleracion * (0.5f * t * t);
 	velocidad = velocidad + aceleracion * t;
-}
 
-void Disparo::setPos(float ix, float iy)
-{
-	posicion.x = ix;
-	posicion.y = iy;
-	origen.x = ix;
-	origen.y = iy;
 }

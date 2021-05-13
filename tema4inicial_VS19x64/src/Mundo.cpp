@@ -20,8 +20,6 @@ void Mundo::dibuja()
 	esfera2.dibuja();
 	caja.dibuja();
 	hombre.dibuja();
-	disparo.dibuja();
-	disparo2.dibuja();
 	plataforma.dibuja();
 	bonus.dibuja();
 }
@@ -40,12 +38,10 @@ void Mundo::teclaEspecial(unsigned char key)
 
 void Mundo::mover()
 {
-	hombre.mueve(0.025f);
+	hombre.mueve(0.025f);		//en hombre.mueve ya está implementado el movimiento de los disparos. 
 	esfera.mueve(0.025f);
 	esfera2.mueve(0.025f);
 	bonus.mueve(0.025f);
-	disparo.mueve(0.025f);
-	disparo2.mueve(0.025f);
 	Interaccion::rebote(hombre, caja);
 	Interaccion::rebote(esfera, caja);
 	Interaccion::rebote(esfera, plataforma);
@@ -67,12 +63,14 @@ void Mundo::inicializa()
 	esfera2.setPos(-2, 4);
 	esfera2.setVel(-5, 15);
 	bonus.setPos(5.0f, 5.0f);
-	disparo.setPos(-5.0f, 0.0f);
 	plataforma.setPos(-5.0f, 9.0f, 5.0f, 9.0f);
 	
 }
 
 void Mundo::tecla(unsigned char key)
 {
-
+	switch (key) {
+	case ' ':
+		hombre.disparo();
+	}
 }

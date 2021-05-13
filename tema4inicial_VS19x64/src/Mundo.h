@@ -3,11 +3,10 @@
 #include "Esfera.h"
 #include "Bonus.h"
 #include "Disparo.h"
+
 class Mundo
 {
 public:
-	Disparo disparo;
-	Disparo disparo2;
 	Esfera esfera;
 	Esfera esfera2;
 	Hombre hombre;

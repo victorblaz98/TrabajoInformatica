@@ -1,4 +1,7 @@
-﻿  Interaccion.cpp
-D:\PROGRAMACION\PRACTICAS\PRACTICA 4\tema4inicial_VS19x64\src\Interaccion.cpp(39,14): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
-D:\PROGRAMACION\PRACTICAS\PRACTICA 4\tema4inicial_VS19x64\src\Interaccion.cpp(40,14): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
-  Pang.vcxproj -> D:\PROGRAMACION\PRACTICAS\PRACTICA 4\tema4inicial_VS19x64\bin\Pang.exe
+﻿  Escopeta.cpp
+  Hombre.cpp
+C:\Users\oty51\OneDrive\Escritorio\TrabajoInformatica-main\tema4inicial_VS19x64\src\Hombre.cpp(38,47): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\oty51\OneDrive\Escritorio\TrabajoInformatica-main\tema4inicial_VS19x64\src\Hombre.cpp(39,32): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+  Pistola.cpp
+  Generando código...
+  Pang.vcxproj -> C:\Users\oty51\OneDrive\Escritorio\TrabajoInformatica-main\tema4inicial_VS19x64\bin\Pang.exe
